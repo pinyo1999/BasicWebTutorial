@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>สูตรคูณ</h1>
+    <input id="input-num" type="number">
+    <br>
+    <button id="btn-1">กด</button>
+    <div id="output-num">
+
+    </div>
+</body>
+<script>
+    function multiplication() {
+        let number = document.getElementById('input-num').value
+        let outputHtml = ''
+        if (number <= 0) {
+            outputHtml += 'NO!!!'
+        } else {
+
+            for (let i = 1; i <= 12; i++) {
+                outputHtml += '<br>'
+                outputHtml += number + ' x ' + i + ' = ' + (number * i)
+                outputHtml += '<br>'
+            }
+        }
+        document.getElementById('output-num').innerHTML = outputHtml
+    }
+    document.getElementById('btn-1').addEventListener('click', multiplication)
+</script>
+
+</html>

@@ -1,25 +1,25 @@
-// การประกาศตัวแปร
+// // การประกาศตัวแปร
 
-let x = 2
-let y = 10
-let z = x + y
-console.log(z)
+// let x = 2
+// let y = 10
+// let z = x + y
+// console.log(z)
 
-// ชนิดข้อมูล
+// // ชนิดข้อมูล
 
-let number = 2
-let string = "pinyo"
-let boolean = false // true, false
-let object = { firstName: "John", lastName: "Doe" };    // Object
+// let number = 2
+// let string = "pinyo"
+// let boolean = false // true, false
+// let object = { firstName: "John", lastName: "Doe" };    // Object
 
 
-// string => number
+// // string => number
 
-let num = number("12")
+// let num = number("12")
 
-// number => string
+// // number => string
 
-let str = string(12)
+// let str = string(12)
 
 
 // Operator
@@ -42,3 +42,8 @@ let str = string(12)
 // %=	x %= y	x = x % y
 // **=	x **= y	x = x ** y
 
+
+// JavaScript Can Change HTML Content
+
+let a = document.getElementById("content-1")
+a.innerHTML = '<p>สวัสดีคนไทย</p>';
