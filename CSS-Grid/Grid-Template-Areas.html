@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .grid-container {
+            display: grid;
+
+
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* 1fr คือคำนวณให้พื้นที่เท่าๆกัน เป็น responsive */
+            grid-template-rows: auto;
+            grid-template-areas:
+                "header header header header"
+                "main main main sidebar"
+                "footer footer footer footer";
+        }
+
+        header {
+            grid-area: header;
+            background: rgb(82, 80, 80);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section {
+            grid-area: main;
+            background: rgb(126, 124, 124);
+
+        }
+
+        aside {
+            grid-area: sidebar;
+            background: rgb(90, 85, 85);
+            padding: 2rem;
+            height: 300px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: rgb(71, 68, 68);
+            padding: 2rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>header</header>
+        <section>section</section>
+        <aside>sidebar</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+
+</html>

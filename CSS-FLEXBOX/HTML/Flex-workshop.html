@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            height: auto;
+            flex-flow: row wrap;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .wrapper>* {
+            /* เลือกทั้งหมดใน wrapper */
+            padding: 10px;
+            flex: 1 100%;
+        }
+
+        .header {
+            background-color: rgb(236, 10, 10);
+
+        }
+
+        .main {
+            background: rgb(31, 146, 199);
+
+        }
+
+        .aside-1 {
+            background: orange;
+        }
+
+        .aside-2 {
+            background: green;
+
+        }
+
+        .footer {
+            background-color: yellow;
+
+        }
+
+        @media screen and (min-width:600px) {
+            .aside {
+                flex: 1 0 0;
+            }
+        }
+
+        @media screen and (min-width:800px) {
+            .main {
+                flex: 3 0 0;
+                order: 2;
+            }
+
+            .aside-1 {
+                order: 1;
+            }
+
+            .aside-2 {
+                order: 3;
+            }
+
+            .footer {
+                order: 4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">Header</header>
+        <nav class="nav">nav</nav>
+        <article class="main">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A ut, labore soluta consectetur, sit recusandae
+                officia accusamus mollitia ex totam error. Nemo praesentium in quis, maiores aliquid perspiciatis
+                voluptates saepe nihil error beatae totam nam at sequi consequuntur? Ipsam eius quae ab quisquam
+                accusamus alias corrupti quis, deleniti sequi voluptate molestiae quasi excepturi et, provident eveniet
+                beatae reiciendis aliquid cupiditate voluptatem quibusdam? Optio sequi culpa quis adipisci, facilis
+                officiis ad explicabo assumenda expedita reiciendis nulla iure, nesciunt maxime tempore, quaerat
+                aspernatur hic sit corrupti ipsa. Facere dolorem alias provident voluptatibus incidunt iste illum
+                accusantium corrupti pariatur magni, vero fugiat inventore veritatis non ea at esse dolores, ab velit
+                cumque fugit. Deserunt maiores enim atque reiciendis nam cumque beatae magnam, veniam fugiat iusto non
+                sed cum culpa eius obcaecati reprehenderit facere doloribus vero mollitia repellendus illum hic nihil
+                laudantium. Dolor, odio eaque? Amet, ducimus et. Omnis sunt deleniti expedita nobis veniam?
+            </p>
+        </article>
+        <aside class="aside aside-1">aside 1</aside>
+        <aside class="aside aside-2">aside 2</aside>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+
+</html>

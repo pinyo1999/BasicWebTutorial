@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .grid-container{
+            display:grid;
+
+            grid-template-columns: 15% 1fr 18%;
+            grid-template-rows: 80px 1fr 50px;
+
+
+            grid-template-areas: 
+                "header header header"
+                "nav section aside"
+                "footer footer footer"
+                ;
+
+            height:100vh;
+            grid-gap: 5px;
+        }
+        header {
+            background-color:rgb(110, 108, 108);
+            grid-area: header;
+        }
+        nav{
+            background-color:aliceblue;
+            grid-area: nav;
+        }
+        section{
+            background-color:antiquewhite;
+            grid-area:section;
+        }
+        aside{
+            background-color:azure;
+            grid-area:aside;
+        }
+        footer{
+            background-color:beige;
+            grid-area:footer;    
+        }
+        header, nav, section, aside, footer{
+            padding:1rem;
+        }
+        @media screen and (max-width:480px){
+            .grid-container{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header"
+                "nav"
+                "section"
+                "aside"
+                "footer"
+                ;
+                grid-template-rows: 4rem 2rem 1fr 1fr 4rem ;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="grid-container">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <section>Section</section>
+        <aside>Sidebar</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
